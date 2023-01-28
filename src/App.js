@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import About from "./About";
 import Cart from "./Cart";
+import Header from "./components/Header";
 import Contact from "./Contact";
 import ErrorPage from "./ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
@@ -36,6 +37,7 @@ const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
+            <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
