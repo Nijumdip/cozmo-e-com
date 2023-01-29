@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { FiShoppingCart } from 'react-icons/fi';
+import { CgMenu , CgClose } from 'react-icons/cg';
 
 const Nav = () => {
 
@@ -159,6 +160,11 @@ const Nav = () => {
                       </NavLink>
                 </li>
               </ul>
+
+        <div className='mobile-navbar-btn'>
+          <CgMenu />
+          <CgClose />
+        </div>
           </div>
       </Nav>
   )
