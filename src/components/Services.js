@@ -1,8 +1,41 @@
 import styled from "styled-components";
+import { TbTruckDelivery } from 'react-icons/tb';
+import { MdSecurity } from 'react-icons/md';
+import { GiReceiveMoney } from 'react-icons/gi';
+import { RiSecurePaymentLine } from 'react-icons/ri';
 
 const Services = () => {
     return (
-        <Wrapper>Services</Wrapper>
+        <Wrapper>
+            <div className="container">
+                <div className="grid grid-three-column">
+                    <div className="services-1">
+                        <div>
+                            <TbTruckDelivery className="icon" />
+                            <h3> Super Fast and Delivery </h3>
+                        </div>
+                    </div>
+
+                    <div className="services-2">
+                        <div className="services-colum-2">
+                            <MdSecurity className="icon" />
+                            <h3> Non-contact Shipping </h3>
+                        </div>
+                        <div className="services-colum-2">
+                            <GiReceiveMoney className="icon" />
+                            <h3> Money-back Guaranteed </h3>
+                        </div>
+                    </div>
+
+                    <div className="services-3">
+                        <div>
+                            <RiSecurePaymentLine className="icon" />
+                            <h3> Super Secure Payment System </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Wrapper>
     )
 };
 
@@ -53,6 +86,7 @@ h3 {
 }
 .icon {
   /* font-size: rem; */
+  margin-right:10px;
   width: 8rem;
   height: 8rem;
   padding: 2rem;
