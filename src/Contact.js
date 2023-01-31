@@ -50,12 +50,11 @@ const Contact = () => {
 
             <div className="container">
                 <div className="contact-form">
-                    <form action="" method="POST">
+                    <form action="https://formspree.io/f/xjvdgepv" method="POST" className="contact-inputs">
                         <input
                             type="text"
                             name="username"
                             placeholder="username"
-                            value=""
                             required
                             autoComplete="off"
                         />
@@ -63,7 +62,6 @@ const Contact = () => {
                             type="email"
                             name="email"
                             placeholder="Email"
-                            value=""
                             required
                             autoComplete="off"
                         />
