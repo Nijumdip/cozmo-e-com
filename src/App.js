@@ -1,11 +1,12 @@
 import React from "react";
-import {  Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import About from "./About";
 import Cart from "./Cart";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Contact from "./Contact";
+import { AppProvider } from "./context/productcontex";
 import ErrorPage from "./ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
 import Home from "./Home";
@@ -36,20 +37,22 @@ const App = () => {
         },
     };
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/singleProduct/:id" element={<SingleProduct />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="*" element={<ErrorPage />} />
-            </Routes>
-            <Footer />
-        </ThemeProvider>
+        <AppProvider>
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/singleProduct/:id" element={<SingleProduct />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="*" element={<ErrorPage />} />
+                </Routes>
+                <Footer />
+            </ThemeProvider>
+        </AppProvider>
     );
 };
 
