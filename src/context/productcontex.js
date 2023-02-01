@@ -9,7 +9,6 @@ const AppProvider = ({ children }) => {
 
   const getProducts = async(url) => {
     const res = await axios.get(url);
-    // console.log(res);
     const products = await res.data;
     console.log(products);
   }
