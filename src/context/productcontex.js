@@ -1,11 +1,14 @@
 import axios from "axios";
-import { createContext, useContext, useEffect } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 
 const AppContext = createContext();
 
 const API="https://api.pujakaitem.com/api/products"
 
 const AppProvider = ({ children }) => {
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+  
 
   const getProducts = async(url) => {
     const res = await axios.get(url);
