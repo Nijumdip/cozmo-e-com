@@ -29,6 +29,7 @@ const ProductReducer = (state, action) => {
             return state;
     }
 
+    return state;
 };
 
 export default ProductReducer;
