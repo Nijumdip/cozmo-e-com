@@ -15,7 +15,7 @@ const ProductReducer = (state, action) => {
                 ...state,
                 isLoading: false,
                 products: action.payload,
-                featureProducts: featureData,
+                featureProducts: featureData ,
             };
 
         case "API_ERROR":
@@ -29,7 +29,6 @@ const ProductReducer = (state, action) => {
             return state;
     }
 
-    return state;
 };
 
 export default ProductReducer;
