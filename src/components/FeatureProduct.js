@@ -5,7 +5,7 @@ import Product from "./Product";
 
 const FeatureProduct = () => {
     const { isLoading, featureProducts } = useProductContext();
-    console.log(featureProducts);
+    // console.log(featureProducts);
 
     if (isLoading) {
         return <div>......Loading </div>;
@@ -16,10 +16,8 @@ const FeatureProduct = () => {
                 <div className="intro-data">Check Now!</div>
                 <div className="common-heading">Our Feature Services</div>
                 <div className="grid grid-three-column">
-                    {featureProducts.map((curElem) => {<Product
-                        key={curElem.id}
-                        {...curElem}
-                        />;
+                    {featureProducts.map((curElem) => {
+                        return <Product key={curElem.id} {...curElem} />;
                     })}
                 </div>
             </div>
