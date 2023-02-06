@@ -43,6 +43,7 @@ const ProductReducer = (state, action) => {
                     ...state,
                     isSingleLoading: false,
                     isError: true,
+                    
                 };
 
         default:
