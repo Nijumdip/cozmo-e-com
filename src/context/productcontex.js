@@ -56,4 +56,4 @@ const useProductContext = () => {
     return useContext(AppContext);
 };
 
-export { AppContext, AppProvider, useProductContext };
+export { AppContext, AppProvider, useProductContext, };
