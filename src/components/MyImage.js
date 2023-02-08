@@ -4,7 +4,11 @@ import styled from 'styled-components';
 const MyImage = ({ imgs }) => {
   console.log(imgs);
   return (
-    <Wrapper>MyImage</Wrapper>
+    <Wrapper>
+      <div className="grid grid-four-column">
+      {imgs?.map((curElm,index)=><figure> <img src={curElm.url} alt={curElm.filename}  /> </figure>)}
+      </div>
+    </Wrapper>
   );
 };
 
