@@ -1,5 +1,5 @@
 const FormatPrice = ({price}) => {
-    return Intl.NumberFormat("bn-BD", {
+    return Intl.NumberFormat("en-BD", {
         style: 'currency',
         currency: "BDT",
         minimumFractionDigits:2
