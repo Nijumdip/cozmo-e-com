@@ -6,6 +6,8 @@ import PageNavigation from "./components/PageNavigation";
 import { useProductContext } from "./context/productcontex";
 import FormatPrice from "./Helpers/FormatPrice";
 import { Container } from "./styles/Container";
+import { TbTruckDelivery, TbReplace } from "react-icons/tb";
+import { MdSecurity } from "react-icons/md";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -50,12 +52,37 @@ const SingleProduct = () => {
                     <div className="product-data">
                         <h2>{name}</h2>
                         <p>{stars}</p>
-              <p>{reviews} reviews</p>
-              <p className="product-data-price">
-                <del>
-                <FormatPrice price={price+250000} />
-                </del>
-              </p>
+                        <p>{reviews} reviews</p>
+                        <p className="product-data-price">
+                            <del>
+                                <FormatPrice price={price + 250000} />
+                            </del>
+                        </p>
+                        <p className="product-data-price product-data-real-price">
+                            Deal of the Day: <FormatPrice price={price} />
+                        </p>
+                        <p>{description}</p>
+                        <div className="product-data-warranty">
+                            <div className="product-warranty-data">
+                                <TbTruckDelivery className="warranty-icon" />
+                                <p>Free Delivery</p>
+                            </div>
+
+                            <div className="product-warranty-data">
+                                <TbReplace className="warranty-icon" />
+                                <p>30 Days Replacement</p>
+                            </div>
+
+                            <div className="product-warranty-data">
+                                <TbTruckDelivery className="warranty-icon" />
+                                <p>Thapa Delivered </p>
+                            </div>
+
+                            <div className="product-warranty-data">
+                                <MdSecurity className="warranty-icon" />
+                                <p>2 Year Warranty </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Container>
