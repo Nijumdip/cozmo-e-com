@@ -13,7 +13,7 @@ const API = "https://api.pujakaitem.com/api/products";
 
 const SingleProduct = () => {
     const { getSingleProduct, isSingleLoading, singleProduct } = useProductContext();
-    console.log(singleProduct);
+    // console.log(singleProduct);
 
     const {
         id: alias,
@@ -82,6 +82,19 @@ const SingleProduct = () => {
                                 <MdSecurity className="warranty-icon" />
                                 <p>2 Year Warranty </p>
                             </div>
+                        </div>
+
+                        <div className="product-data-info">
+                            <p>
+                                Available:
+                                <span> {stock > 0 ? "In Stock" : "Not Available"}</span>
+                            </p>
+                            <p>
+                                ID : <span> {id} </span>
+                            </p>
+                            <p>
+                                Brand :<span> {company} </span>
+                            </p>
                         </div>
                     </div>
                 </div>
