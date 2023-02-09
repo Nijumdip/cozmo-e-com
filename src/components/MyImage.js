@@ -26,13 +26,6 @@ const MyImage = ({ imgs = [{ url: "" }] }) => {
             <div className="main-screen">
                 <img src={mainImage.url} alt={mainImage.filename} />
             </div>
-
-            {/* 2nd column  */}
-            <div className="main-screen">
-                <img src={mainImage.url} alt={mainImage.filename} />
-            </div>
-
-            
         </Wrapper>
     );
 };
