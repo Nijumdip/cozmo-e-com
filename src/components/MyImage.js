@@ -4,8 +4,7 @@ import styled from "styled-components";
 
 const MyImage = ({ imgs = [{ url: "" }] }) => {
     // console.log(imgs);
-    const [mainImage, setMainImage] = useState("");
-    // const [mainImage, setMainImage] = useState(imgs[0]);
+    const [mainImage, setMainImage] = useState(imgs[0]);
 
     return (
         <Wrapper>
