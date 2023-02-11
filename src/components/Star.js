@@ -8,6 +8,7 @@ const Star = ({ stars, reviews }) => {
 
     const ratingStar = Array.from({ length: 5 }, (elem, index) => {
         let numbers = index + 0.5;
+        console.log(numbers);
         return <span key={index}>{
             stars >= index + 1
                 ? <FaStar className="icon" />
