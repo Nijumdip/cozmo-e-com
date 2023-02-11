@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCheck } from "react-icons/fa";
 import CartAmountToggle from "./CartAmountToggle";
+import { NavLink } from "react-router-dom";
+import { Button } from "../styles/Button";
 
 const AddToCart = ({ product }) => {
     const { id, colors, stock } = product;
@@ -42,7 +44,9 @@ const AddToCart = ({ product }) => {
             setIncrease={setIncrease}
             />
             
-            
+            <NavLink to="/cart" >
+            <Button>Add To Cart</Button>
+            </NavLink>
         </Wrapper>
     );
 };
