@@ -9,6 +9,7 @@ import { Container } from "./styles/Container";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md";
 import Star from "./components/Star";
+import AddToCart from "./components/AddToCart";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -58,10 +59,13 @@ const SingleProduct = () => {
                                 <FormatPrice price={price + 250000} />
                             </del>
                         </p>
+
                         <p className="product-data-price product-data-real-price">
                             Deal of the Day: <FormatPrice price={price} />
                         </p>
+
                         <p>{description}</p>
+
                         <div className="product-data-warranty">
                             <div className="product-warranty-data">
                                 <TbTruckDelivery className="warranty-icon" />
@@ -96,6 +100,9 @@ const SingleProduct = () => {
                                 Brand :<span> {company} </span>
                             </p>
                         </div>
+
+                        <hr />
+                        {stock > 0 && <AddToCart product={singleProduct} /> }
                     </div>
                 </div>
             </Container>
