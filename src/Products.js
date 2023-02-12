@@ -18,9 +18,7 @@ const Products = () => {
                     <Sort />
                 </div>
                 
-                <div className="main-product">
-                    <ProductList />
-                </div>
+               
         </section>
         
         </Wrapper>
