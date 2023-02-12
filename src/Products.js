@@ -13,13 +13,7 @@ const Products = () => {
                 </div>
             </div>
 
-            <section className="product-view--sort">
-                <div className="sort-filter">
-                    <Sort />
-                </div>
-                
-               
-        </section>
+            
         
         </Wrapper>
     );
