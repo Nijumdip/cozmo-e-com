@@ -6,6 +6,7 @@ import Cart from "./Cart";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Contact from "./Contact";
+import { FilterContextProvider } from "./context/filter_context";
 import { AppProvider } from "./context/productcontex";
 import ErrorPage from "./ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
@@ -38,6 +39,7 @@ const App = () => {
     };
     return (
         <AppProvider>
+            <FilterContextProvider>
             <ThemeProvider theme={theme}>
                 <GlobalStyle />
                 <Header />
@@ -52,6 +54,7 @@ const App = () => {
                 </Routes>
                 <Footer />
             </ThemeProvider>
+            </FilterContextProvider>
         </AppProvider>
     );
 };
