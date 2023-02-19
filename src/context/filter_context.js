@@ -26,8 +26,9 @@ export const FilterContextProvider = ({ children }) => {
     const setListView = () => {
         dispatch({ type: "SET_LIST_VIEW" });
     };
-    const sorting = () => {
-        dispatch({ type: "GET_SORT_VALUE" });
+    const sorting = (e) => {
+        let userValue = e.target.value;
+        dispatch({ type: "GET_SORT_VALUE", payload: userValue });
     };
 
 
