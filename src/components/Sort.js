@@ -38,9 +38,9 @@ const Sort = () => {
                         id="sort"
                         onClick={sorting}
                     >
-                        <option value="highest">Price(highest)</option>
-                        <option value="#" disabled></option>
                         <option value="lowest">Price(lowest)</option>
+                        <option value="#" disabled></option>
+                        <option value="highest">Price(highest)</option>
                         <option value="#" disabled></option>
                         <option value="a-z">Price(a-z)</option>
                         <option value="#" disabled></option>
