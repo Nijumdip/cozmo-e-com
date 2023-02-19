@@ -27,7 +27,6 @@ const FilterReducer = (state, action) => {
       return {
         ...state,
         sorting_value: action.payload,
-        
       };
     
     case "SORTING_PRODUCTS":
