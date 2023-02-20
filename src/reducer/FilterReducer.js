@@ -49,6 +49,7 @@ const FilterReducer = (state, action) => {
 
         if (sorting_value === "a-z") {
           return a.name.localeCompare(b.name);
+          
         };
 
         if (sorting_value === "z-a") {
