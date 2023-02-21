@@ -3,7 +3,19 @@ import styled from 'styled-components';
 
 const FilterSection = () => {
   return (
-    <Wrapper>FilterSection</Wrapper>
+    <Wrapper>
+    <div className="filter-search">
+        <form onSubmit={(e) => e.preventDefault()}>
+          <input
+            type="text"
+            name="text"
+            placeholder="Search"
+            value={text}
+            onChange={updateFilterValue}
+          />
+        </form>
+      </div>
+    </Wrapper>
   );
 };
 
