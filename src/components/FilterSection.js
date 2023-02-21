@@ -2,8 +2,10 @@ import React from 'react'
 
 const FilterSection = () => {
   return (
-    <div>FilterSection</div>
-  )
-}
+    <Wrapper>FilterSection</Wrapper>
+  );
+};
+
+
 
 export default FilterSection
