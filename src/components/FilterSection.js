@@ -2,6 +2,15 @@ import React from 'react'
 import styled from 'styled-components';
 
 const FilterSection = () => {
+
+
+   const {
+    filters: { text, category, color },
+    updateFilterValue,
+    all_products,
+  } = useFilterContext();
+
+
   return (
     <Wrapper>
     <div className="filter-search">
