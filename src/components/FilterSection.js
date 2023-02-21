@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
+import { useFilterContext } from '../context/filter_context';
 
 const FilterSection = () => {
 
 
-   const {
+  const {
     filters: { text, category, color },
     updateFilterValue,
     all_products,
