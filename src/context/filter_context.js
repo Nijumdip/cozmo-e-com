@@ -11,7 +11,7 @@ const initialState = {
     all_products: [],
     grid_view: true,
     sorting_value: "highest",
-    filter: {
+    filters: {
         text: "",
     },
 };
@@ -41,8 +41,9 @@ export const FilterContextProvider = ({ children }) => {
 
     useEffect(() => {
         // console.log("hii");
+        dispatch({type:"FILTER_PRODUCTS"})
         dispatch({ type: "SORTING_PRODUCTS" });
-    }, [products, state.sorting_value]);
+    }, [products, state.sorting_value, state.filters]);
 
     useEffect(() => {
         dispatch({ type: "LOAD_FILTER_PRODUCTS", payload: products });

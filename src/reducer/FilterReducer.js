@@ -34,7 +34,7 @@ const FilterReducer = (state, action) => {
       let newSortData;
       // let tempSortProduct = [...action.payload];
 
-      const { filter_products,sorting_value } = state;
+      const { filter_products, sorting_value } = state;
       let tempSortProduct = [...filter_products];
 
       const sortingProducts = ((a, b) => {
@@ -55,14 +55,39 @@ const FilterReducer = (state, action) => {
           return b.name.localeCompare(a.name);
         };
       });
-
-
       newSortData = tempSortProduct.sort(sortingProducts);
      
       return {
         ...state,
         filter_products: newSortData
+      };
+    
+    case "UPDATE_FILTER_VALUE":
+      const { name, value } = action.payload;
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          [name] :value,
+        }
+      };
+    
+    case "FILTER_PRODUCTS":
+      let { all_products } = state;
+      let tempFilterProduct = [...all_products];
+
+      const { text } = state.filters;
+
+      if (text) {
+        tempFilterProduct = tempFilterProduct.filter((curElem) => {
+          return curElem.name.toLowerCase().includes(text);
+        })
       }
+      return {
+        ...state,
+        filter_products: tempFilterProduct,
+      }
+    
     default:
       return state
   }
