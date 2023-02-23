@@ -44,7 +44,7 @@ const FilterSection = () => {
                                 type="button"
                                 name="category"
                                 value={curElem}
-                                // className={curElem === category ? "active" : ""}
+                                className={curElem === category ? "active" : ""}
                                 onClick={updateFilterValue}
                             >
                                 {curElem}
