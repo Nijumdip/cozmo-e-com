@@ -5,14 +5,16 @@ import { useFilterContext } from "../context/filter_context";
 const FilterSection = () => {
     const { filters: { text }, all_products, updateFilterValue } = useFilterContext();
 
-    const getUniqData = (data, attr) => {
+    const getUniqueData = (data, attr) => {
         let newVal = data.map((curElem) => {
             return curElem[attr];
         });
+
+        newVal = ["All", ...new Set(newVal)]
         console.log(newVal);
     }
     
-    const categoryData = getUniqData(all_products, "category");
+    const categoryData = getUniqueData(all_products, "category");
 
     return (
         <Wrapper>
@@ -26,6 +28,15 @@ const FilterSection = () => {
                         onChange={updateFilterValue}
                     />
                 </form>
+            </div>
+
+            <div className="filter-category">
+                <h3>Category</h3>
+                <div>
+                 {
+                    categoryData.map()
+                 }
+                </div>
             </div>
         </Wrapper>
     );
