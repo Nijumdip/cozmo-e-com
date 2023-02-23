@@ -3,7 +3,16 @@ import styled from "styled-components";
 import { useFilterContext } from "../context/filter_context";
 
 const FilterSection = () => {
-    const {filters: {text}, updateFilterValue} = useFilterContext();
+    const { filters: { text }, all_products, updateFilterValue } = useFilterContext();
+
+    const getUniqData = (data, attr) => {
+        let newVal = data.map((curElem) => {
+            return curElem[attr];
+        });
+        console.log(newVal);
+    }
+    
+    const categoryData = getUniqData(all_products, "category");
 
     return (
         <Wrapper>
