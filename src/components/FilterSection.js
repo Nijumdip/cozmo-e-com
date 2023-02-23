@@ -3,17 +3,21 @@ import styled from "styled-components";
 import { useFilterContext } from "../context/filter_context";
 
 const FilterSection = () => {
-    const { filters: { text }, all_products, updateFilterValue } = useFilterContext();
+    const {
+        filters: { text, category },
+        all_products,
+        updateFilterValue,
+    } = useFilterContext();
 
     const getUniqueData = (data, attr) => {
         let newVal = data.map((curElem) => {
             return curElem[attr];
         });
 
-        newVal = ["All", ...new Set(newVal)]
-        console.log(newVal);
-    }
-    
+        newVal = ["All", ...new Set(newVal)];
+        // console.log(newVal);
+    };
+
     const categoryData = getUniqueData(all_products, "category");
 
     return (
@@ -33,9 +37,20 @@ const FilterSection = () => {
             <div className="filter-category">
                 <h3>Category</h3>
                 <div>
-                 {
-                    categoryData.map()
-                 }
+                    {categoryData?.map((curElem, index) => {
+                        return (
+                            <button
+                                key={index}
+                                type="button"
+                                name="category"
+                                value={curElem}
+                                // className={curElem === category ? "active" : ""}
+                                onClick={updateFilterValue}
+                            >
+                                {curElem}
+                            </button>
+                        );
+                    })}
                 </div>
             </div>
         </Wrapper>
