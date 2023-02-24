@@ -52,6 +52,10 @@ const FilterSection = () => {
                     })}
                 </div>
             </div>
+
+            <div className="filter-company">
+                <h3>Company</h3>
+            </div>
         </Wrapper>
     );
 };
