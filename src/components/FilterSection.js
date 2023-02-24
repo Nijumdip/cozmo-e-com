@@ -13,8 +13,7 @@ const FilterSection = () => {
         let newVal = data.map((curElem) => {
             return curElem[attr];
         });
-
-        newVal = ["All", ...new Set(newVal)];
+        return (newVal = ["All", ...new Set(newVal)]);
         // console.log(newVal);
     };
 
