@@ -68,7 +68,6 @@ const FilterSection = () => {
                             <option
                                 name="company"
                                 value={curElem}
-                                
                             >
                                 {curElem}
                             </option>
