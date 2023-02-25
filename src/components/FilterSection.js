@@ -63,14 +63,17 @@ const FilterSection = () => {
                     className="filter-company--select"
                     onClick={updateFilterValue}
                 >
-                    {
-                        companyData.map((curElem, index) => {
-                            return (
-                                <option name="company"
-                                value={curElem}>{curElem}</option>
-                            );
-                        }) 
-                    }
+                    {companyData.map((curElem, index) => {
+                        return (
+                            <option
+                                name="company"
+                                value={curElem}
+                                
+                            >
+                                {curElem}
+                            </option>
+                        );
+                    })}
                 </select>
             </div>
         </Wrapper>
