@@ -65,12 +65,7 @@ const FilterSection = () => {
                 >
                     {companyData.map((curElem, index) => {
                         return (
-                            <option
-                                name="company"
-                                value={curElem}
-                            >
-                                {curElem}
-                            </option>
+                            
                         );
                     })}
                 </select>
