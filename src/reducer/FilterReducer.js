@@ -84,18 +84,18 @@ const FilterReducer = (state, action) => {
         });
       };
 
-      if (category) {
+      if (category !== "all") {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.category === category;
         });
       };
 
-      if (company) {
+      if (company !== "all") {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.company.toLowerCase() === company.toLowerCase();
         });
       };
-      
+
       return {
         ...state,
         filter_products: tempFilterProduct,

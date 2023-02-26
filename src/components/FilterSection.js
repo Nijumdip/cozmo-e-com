@@ -13,13 +13,13 @@ const FilterSection = () => {
         let newVal = data.map((curElem) => {
             return curElem[attr];
         });
-        return (newVal = ["All", ...new Set(newVal)]);
+        return (newVal = ["all", ...new Set(newVal)]);
         // console.log(newVal);
     };
 
     const categoryData = getUniqueData(all_products, "category");
     const companyData = getUniqueData(all_products, "company");
-    console.log(companyData);
+    // console.log(companyData);
 
     return (
         <Wrapper>
@@ -66,7 +66,7 @@ const FilterSection = () => {
                     >
                         {companyData.map((curElem, index) => {
                             return (
-                                <option name="company" value={curElem}>
+                                <option key={index} value={curElem} name="company">
                                     {curElem}
                                 </option>
                             );
