@@ -57,23 +57,22 @@ const FilterSection = () => {
 
             <div className="filter-company">
                 <h3>Company</h3>
-                <select
-                    name="company"
-                    id="company"
-                    className="filter-company--select"
-                    onClick={updateFilterValue}
-                >
-                    {companyData.map((curElem, index) => {
-                        return (
-                            <option
-                                name="company"
-                                value={curElem}
-                            >
-                                {curElem}
-                            </option>
-                        );
-                    })}
-                </select>
+                <form action="#">
+                    <select
+                        name="company"
+                        id="company"
+                        className="filter-company--select"
+                        onClick={updateFilterValue}
+                    >
+                        {companyData.map((curElem, index) => {
+                            return (
+                                <option name="company" value={curElem}>
+                                    {curElem}
+                                </option>
+                            );
+                        })}
+                    </select>
+                </form>
             </div>
         </Wrapper>
     );
@@ -170,6 +169,5 @@ const Wrapper = styled.section`
         color: #000;
     }
 `;
-
 
 export default FilterSection;
