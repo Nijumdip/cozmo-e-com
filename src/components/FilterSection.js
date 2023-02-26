@@ -13,13 +13,19 @@ const FilterSection = () => {
         let newVal = data.map((curElem) => {
             return curElem[attr];
         });
+
+        if (attr === "colors") {
+            // return (newVal = ["All",...new Set([].concat(...newVal))]);
+            newVal = newVal.flat();
+        }
         return (newVal = ["all", ...new Set(newVal)]);
         // console.log(newVal);
     };
 
     const categoryData = getUniqueData(all_products, "category");
     const companyData = getUniqueData(all_products, "company");
-    // console.log(companyData);
+    const colorsData = getUniqueData(all_products, "colors");
+    console.log(colorsData);
 
     return (
         <Wrapper>
