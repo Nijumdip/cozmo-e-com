@@ -4,7 +4,7 @@ import { useFilterContext } from "../context/filter_context";
 
 const FilterSection = () => {
     const {
-        filters: { text }, all_products, updateFilterValue } = useFilterContext();
+        filters: { text, color }, all_products, updateFilterValue } = useFilterContext();
 
     const getUniqueData = (data, attr) => {
         let newVal = data.map((curElem) => {
@@ -92,7 +92,7 @@ const FilterSection = () => {
                                 className="btnStyle"
                                 onClick={updateFilterValue}
                             >
-                                {curElem}
+                                {color=== curElem ? "" : null}
                             </button>
                         );
                     })}
