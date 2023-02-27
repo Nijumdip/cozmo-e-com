@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { useFilterContext } from "../context/filter_context";
+import { FaCheck } from "react-icons/fa";
 
 const FilterSection = () => {
     const {
-        filters: { text, color }, all_products, updateFilterValue } = useFilterContext();
+        filters: { text, color },
+        all_products,
+        updateFilterValue,
+    } = useFilterContext();
 
     const getUniqueData = (data, attr) => {
         let newVal = data.map((curElem) => {
@@ -82,6 +86,20 @@ const FilterSection = () => {
                 <h3>Colors</h3>
                 <div className="filter-color-style">
                     {colorsData.map((curElem, index) => {
+                        if (curElem === "all") {
+                            return (
+                                <button
+                                    key={index}
+                                    type="button"
+                                    value={curElem}
+                                    name="color"
+                                    className="color-all--style"
+                                    onClick={updateFilterValue}
+                                >
+                                    all
+                                </button>
+                            );
+                        }
                         return (
                             <button
                                 key={index}
@@ -89,10 +107,10 @@ const FilterSection = () => {
                                 name="color"
                                 value={curElem}
                                 style={{ backgroundColor: curElem }}
-                                className="btnStyle"
+                                className={color === curElem ? "btnStyle active" : "btnStyle"}
                                 onClick={updateFilterValue}
                             >
-                                {color=== curElem ? "" : null}
+                                {color === curElem ? <FaCheck className="checkStyle" /> : null}
                             </button>
                         );
                     })}
@@ -172,8 +190,9 @@ const Wrapper = styled.section`
         opacity: 1;
     }
     .checkStyle {
-        font-size: 1rem;
+        font-size: 2rem;
         color: #fff;
+        padding-bottom: 3px;
     }
     .filter_price {
         input {
