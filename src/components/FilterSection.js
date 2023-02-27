@@ -4,10 +4,7 @@ import { useFilterContext } from "../context/filter_context";
 
 const FilterSection = () => {
     const {
-        filters: { text, category },
-        all_products,
-        updateFilterValue,
-    } = useFilterContext();
+        filters: { text }, all_products, updateFilterValue } = useFilterContext();
 
     const getUniqueData = (data, attr) => {
         let newVal = data.map((curElem) => {
@@ -25,7 +22,7 @@ const FilterSection = () => {
     const categoryData = getUniqueData(all_products, "category");
     const companyData = getUniqueData(all_products, "company");
     const colorsData = getUniqueData(all_products, "colors");
-    console.log(colorsData);
+    // console.log(colorsData);
 
     return (
         <Wrapper>
@@ -79,6 +76,27 @@ const FilterSection = () => {
                         })}
                     </select>
                 </form>
+            </div>
+
+            <div className="filter-colors colors">
+                <h3>Colors</h3>
+                <div className="filter-color-style">
+                    {colorsData.map((curElem, index) => {
+                        return (
+                            <button
+                                key={index}
+                                type="button"
+                                name="color"
+                                value={curElem}
+                                style={{ backgroundColor: curElem }}
+                                className="btnStyle"
+                                onClick={updateFilterValue}
+                            >
+                                {curElem}
+                            </button>
+                        );
+                    })}
+                </div>
             </div>
         </Wrapper>
     );
