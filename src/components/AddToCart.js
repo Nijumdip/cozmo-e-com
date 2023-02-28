@@ -11,10 +11,10 @@ const AddToCart = ({ product }) => {
 
     const [amount, setAmount] = useState(1);
 
-    const setDecrease = () => { 
+    const setDecrease = () => {
         amount > 1 ? setAmount(amount - 1) : setAmount(1);
     };
-    const setIncrease = () => { 
+    const setIncrease = () => {
         amount < stock ? setAmount(amount + 1) : setAmount(stock);
     };
 
@@ -31,21 +31,17 @@ const AddToCart = ({ product }) => {
                                 className={color === curColor ? "btnStyle active" : "btnStyle"}
                                 onClick={() => setColor(curColor)}
                             >
-                            {color === curColor ? <FaCheck className="checkStyle"/> : null}
+                                {color === curColor ? <FaCheck className="checkStyle" /> : null}
                             </button>
                         );
                     })}
                 </p>
             </div>
 
-            <CartAmountToggle
-            amount={amount}
-            setDecrease={setDecrease}
-            setIncrease={setIncrease}
-            />
-            
-            <NavLink to="/cart" >
-            <Button>Add To Cart</Button>
+            <CartAmountToggle amount={amount} setDecrease={setDecrease} setIncrease={setIncrease} />
+
+            <NavLink to="/cart">
+                <Button>Add To Cart</Button>
             </NavLink>
         </Wrapper>
     );
