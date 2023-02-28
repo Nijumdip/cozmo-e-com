@@ -116,6 +116,8 @@ const FilterSection = () => {
                     })}
                 </div>
             </div>
+
+            
         </Wrapper>
     );
 };
