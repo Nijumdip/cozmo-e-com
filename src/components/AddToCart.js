@@ -33,7 +33,6 @@ const AddToCart = ({ product }) => {
                             >
                                 {color === curColor ? <FaCheck className="checkStyle" /> : null}
                             </button>
-                            
                         );
                     })}
                 </p>
