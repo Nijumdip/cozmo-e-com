@@ -40,7 +40,9 @@ const AddToCart = ({ product }) => {
 
             <CartAmountToggle amount={amount} setDecrease={setDecrease} setIncrease={setIncrease} />
 
-           
+            <NavLink to="/cart">
+                <Button>Add To Cart</Button>
+            </NavLink>
         </Wrapper>
     );
 };
