@@ -8,7 +8,6 @@ import { Button } from "../styles/Button";
 const AddToCart = ({ product }) => {
     const { id, colors, stock } = product;
     const [color, setColor] = useState(colors[0]);
-
     const [amount, setAmount] = useState(1);
 
     const setDecrease = () => {
@@ -40,7 +39,9 @@ const AddToCart = ({ product }) => {
 
             <CartAmountToggle amount={amount} setDecrease={setDecrease} setIncrease={setIncrease} />
 
-            <NavLink to="/cart">
+            <NavLink to="/cart"
+                onClick={()=>addToCart(id, amount, product)}
+            >
                 <Button>Add To Cart</Button>
             </NavLink>
         </Wrapper>
