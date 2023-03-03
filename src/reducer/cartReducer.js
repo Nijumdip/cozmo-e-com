@@ -3,7 +3,7 @@ const cartReducer = (state, action) => {
       let { id, color, amount, product } = action.payload;
       // console.log( product);
 
-      
+      let cartProduct;
 
       cartProduct = {
         id: id + color,
