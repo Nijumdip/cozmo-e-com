@@ -4,6 +4,8 @@ import { useReducer } from "react";
 import { createContext } from "react";
 import reducer from "../reducer/FilterReducer";
 import { useProductContext } from "./productcontex";
+
+
 const FilterContext = createContext();
 
 const initialState = {

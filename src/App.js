@@ -6,6 +6,7 @@ import Cart from "./Cart";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Contact from "./Contact";
+import { CartProvider } from "./context/cart_context";
 import { FilterContextProvider } from "./context/filter_context";
 import { AppProvider } from "./context/productcontex";
 import ErrorPage from "./ErrorPage";
@@ -40,20 +41,22 @@ const App = () => {
     return (
         <AppProvider>
             <FilterContextProvider>
-            <ThemeProvider theme={theme}>
-                <GlobalStyle />
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/products" element={<Products />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/singleProduct/:id" element={<SingleProduct />} />
-                    <Route path="/cart" element={<Cart />} />
-                    <Route path="*" element={<ErrorPage />} />
-                </Routes>
-                <Footer />
-            </ThemeProvider>
+                <CartProvider>
+                    <ThemeProvider theme={theme}>
+                        <GlobalStyle />
+                        <Header />
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/products" element={<Products />} />
+                            <Route path="/contact" element={<Contact />} />
+                            <Route path="/singleProduct/:id" element={<SingleProduct />} />
+                            <Route path="/cart" element={<Cart />} />
+                            <Route path="*" element={<ErrorPage />} />
+                        </Routes>
+                        <Footer />
+                    </ThemeProvider>
+                </CartProvider>
             </FilterContextProvider>
         </AppProvider>
     );
