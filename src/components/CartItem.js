@@ -9,7 +9,7 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
     // console.log({ id, name, image, color, price, amount });
 
     const { removeItem } = useCartContext();
-    
+
     // const [amount, setAmount] = useState(1);
 
     const setDecrease = () => {
