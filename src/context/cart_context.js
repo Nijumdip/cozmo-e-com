@@ -3,14 +3,7 @@ import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
-const getLocalCartData = () => {
-  let localCartData = localStorage.getItem("thapaCart");
-  if (localCartData === []) {
-    return [];
-  } else {
-    return JSON.parse(localCartData);
-  }
-}
+
 
 const initialState = {
     // cart: [],
