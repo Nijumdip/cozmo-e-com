@@ -8,6 +8,8 @@ const Cart = () => {
     const { cart, clearCart } = useCartContext();
     // console.log(cart);
 
+    
+
     return (
         <Wrapper>
             <div className="container">
@@ -39,6 +41,17 @@ const Cart = () => {
         </Wrapper>
     );
 };
+
+const EmptyDiv = styled.div`
+    display: grid;
+    place-items: center;
+    height: 50vh;
+    h3 {
+        font-size: 4.2rem;
+        text-transform: capitalize;
+        font-weight: 300;
+    }
+`;
 
 const Wrapper = styled.section`
     padding: 9rem 0;
