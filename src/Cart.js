@@ -5,7 +5,7 @@ import { useCartContext } from "./context/cart_context";
 import { Button } from "./styles/Button";
 
 const Cart = () => {
-    const { cart } = useCartContext();
+    const { cart, clearCart } = useCartContext();
     // console.log(cart);
 
     return (
@@ -31,8 +31,7 @@ const Cart = () => {
                 <NavLink to="/products">
                   <Button> continue Shopping </Button>
                 </NavLink>
-                {/* <Button className="btn btn-clear" onClick={clearCart}> */}
-                <Button className="btn btn-clear" >
+                <Button className="btn btn-clear" onClick={clearCart}>
                   clear cart
                 </Button>
               </div>
