@@ -1,6 +1,8 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import CartItem from "./components/CartItem";
 import { useCartContext } from "./context/cart_context";
+import { Button } from "./styles/Button";
 
 const Cart = () => {
     const { cart } = useCartContext();
@@ -19,10 +21,23 @@ const Cart = () => {
                 <hr />
 
                 <div className="cart-item">
-                {cart.map((curElem) => {
-                  return <CartItem key={curElem.id} {...curElem} />;
-                })}
+                    {cart.map((curElem) => {
+                        return <CartItem key={curElem.id} {...curElem} />;
+                    })}
+                </div>
+                <hr />
+
+                <div className="cart-two-button">
+                <NavLink to="/products">
+                  <Button> continue Shopping </Button>
+                </NavLink>
+                {/* <Button className="btn btn-clear" onClick={clearCart}> */}
+                <Button className="btn btn-clear" >
+                  clear cart
+                </Button>
               </div>
+      
+
             </div>
         </Wrapper>
     );
