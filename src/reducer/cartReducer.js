@@ -4,7 +4,6 @@ const cartReducer = (state, action) => {
       // console.log( product);
 
       let cartProduct;
-
       cartProduct = {
         id: id + color,
         name: product.name,
@@ -28,6 +27,13 @@ const cartReducer = (state, action) => {
       ...state,
       cart: updatedCart,
     };
+  };
+
+  if (action.type === "CLEAR_CART") {
+    return {
+      ...state,
+      cart:[],
+    }
   }
     return state;
 };

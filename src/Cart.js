@@ -28,15 +28,13 @@ const Cart = () => {
                 <hr />
 
                 <div className="cart-two-button">
-                <NavLink to="/products">
-                  <Button> continue Shopping </Button>
-                </NavLink>
-                <Button className="btn btn-clear" onClick={clearCart}>
-                  clear cart
-                </Button>
-              </div>
-      
-
+                    <NavLink to="/products">
+                        <Button> continue Shopping </Button>
+                    </NavLink>
+                    <Button className="btn btn-clear" onClick={clearCart}>
+                        clear cart
+                    </Button>
+                </div>
             </div>
         </Wrapper>
     );
