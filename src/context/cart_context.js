@@ -10,6 +10,7 @@ const getLocalCartData = () => {
   } else {
     return JSON.parse(localCartData);
   }
+  
 }
 
 const initialState = {
