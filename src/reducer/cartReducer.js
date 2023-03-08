@@ -17,6 +17,7 @@ const cartReducer = (state, action) => {
             return {
               ...curElem,
               amount: newAmount,
+              
             };
           } else {
             return curElem;
