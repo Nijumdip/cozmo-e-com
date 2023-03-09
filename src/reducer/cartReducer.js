@@ -14,7 +14,11 @@ const cartReducer = (state, action) => {
             if (newAmount >= curElem.max) {
               newAmount = curElem.max;
             }
-            
+            return {
+              ...curElem,
+              amount: newAmount,
+              
+            };
           } else {
             return curElem;
           }
