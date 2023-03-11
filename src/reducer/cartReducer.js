@@ -48,7 +48,6 @@ const cartReducer = (state, action) => {
 
   if (action.type === "SET_DECREASE") {
     let updatedProduct = state.cart.map((curElem) => {
-      
     })
   }
 
