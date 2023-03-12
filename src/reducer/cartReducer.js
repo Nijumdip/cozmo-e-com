@@ -46,10 +46,7 @@ const cartReducer = (state, action) => {
         }
   };
 
-  if (action.type === "SET_DECREASE") {
-    let updatedProduct = state.cart.map((curElem) => {
-    })
-  }
+  
 
     if (action.type === "REMOVE_ITEM") {
         let updatedCart = state.cart.filter((curItem) => curItem.id !== action.payload);
