@@ -66,6 +66,7 @@ const cartReducer = (state, action) => {
             cart: [],
         };
     }
+  
     return state;
 };
 
