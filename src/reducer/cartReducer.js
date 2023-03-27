@@ -48,7 +48,22 @@ const cartReducer = (state, action) => {
 
   if (action.type === "SET_DECREASE") {
     let updatedProduct = state.cart.map((curElem) => {
+      if (curElem.id === action.payload) {
+        // console.log(curElem);
+        let decAmount = curElem.amount - 1;
+
+        return {
+          ...curElem,
+          amount: decAmount,
+        }
+      } else {
+        return curElem;
+      }
     })
+    return {
+      ...state,
+      cart:updatedProduct,
+    }
   }
 
   if (action.type === "REMOVE_ITEM") {

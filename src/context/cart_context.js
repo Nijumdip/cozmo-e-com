@@ -28,7 +28,7 @@ const CartProvider = ({ children }) => {
     };
 
     const setDecrease = (id) => {
-        dispatch({ type: 'SET_INCREASE', payload: id });
+        dispatch({ type: 'SET_DECREASE', payload: id });
         // amount > 1 ? setAmount(amount - 1) : setAmount(1);
     };
     const setIncrease = (id) => {

@@ -39,7 +39,11 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
             </div>
 
             {/* Quantity  */}
-            <CartAmountToggle amount={amount} setDecrease={()=>setDecrease(id)} setIncrease={()=>setIncrease()} />
+            <CartAmountToggle
+                amount={amount}
+                setDecrease={() => setDecrease(id)}
+                setIncrease={() => setIncrease(id)}
+            />
 
             {/* //Subtotal */}
             <div className="cart-hide">
