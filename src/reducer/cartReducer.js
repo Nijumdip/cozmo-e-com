@@ -51,6 +51,7 @@ const cartReducer = (state, action) => {
       if (curElem.id === action.payload) {
         // console.log(curElem);
         let decAmount = curElem.amount - 1;
+        
 
         return {
           ...curElem,
