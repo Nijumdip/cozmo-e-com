@@ -51,6 +51,9 @@ const cartReducer = (state, action) => {
       if (curElem.id === action.payload) {
         // console.log(curElem);
         let decAmount = curElem.amount - 1;
+        if (decAmount <= 1) {
+          decAmount = 1;
+        }
 
         return {
           ...curElem,
@@ -63,6 +66,30 @@ const cartReducer = (state, action) => {
     return {
       ...state,
       cart:updatedProduct,
+    }
+  }
+
+  if (action.type === "SET_INCREASE") {
+    let updatedProduct = state.cart.map((curElem) => {
+      if (curElem.id === action.payload) {
+        // console.log(curElem);
+        let incAmount = curElem.amount + 1;
+
+        if (incAmount >= curElem.max) {
+          incAmount = curElem.max;
+        }
+
+        return {
+          ...curElem,
+          amount:incAmount,
+        }
+      } else{
+        return curElem;
+      }
+    })
+    return {
+      ...state,
+      cart: updatedProduct,
     }
   }
 

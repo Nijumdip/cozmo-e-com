@@ -28,11 +28,11 @@ const CartProvider = ({ children }) => {
     };
 
     const setDecrease = (id) => {
-        dispatch({ type: 'SET_DECREASE', payload: id });
+        dispatch({ type: "SET_DECREASE", payload: id });
         // amount > 1 ? setAmount(amount - 1) : setAmount(1);
     };
     const setIncrease = (id) => {
-        dispatch({ type: 'SET_INCREASE', payload: id });
+        dispatch({ type: "SET_INCREASE", payload: id });
         // amount < stock ? setAmount(amount + 1) : setAmount(stock);
     };
 
@@ -50,7 +50,9 @@ const CartProvider = ({ children }) => {
     }, [state.cart]);
 
     return (
-        <CartContext.Provider value={{ ...state, addToCart, removeItem, clearCart, setIncrease, setDecrease }}>
+        <CartContext.Provider
+            value={{ ...state, addToCart, removeItem, clearCart, setIncrease, setDecrease }}
+        >
             {children}
         </CartContext.Provider>
     );
