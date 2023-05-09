@@ -142,7 +142,6 @@ const cartReducer = (state, action) => {
                 /* accum.total_item += amount;
                 accum.total_price += price * amount; */
                 
-                
                 accum.total_item = accum.total_item+ amount;
                 accum.total_price = accum.total_price+ price * amount;
 
