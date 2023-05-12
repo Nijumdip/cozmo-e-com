@@ -10,7 +10,7 @@ import { Button } from "../styles/Button";
 const Nav = () => {
     const [menuIcon, setMenuIcon] = useState();
 
-    const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
+    const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
     const { total_item } = useCartContext();
 
@@ -181,6 +181,8 @@ const Nav = () => {
                             contact
                         </NavLink>
                     </li>
+
+                    {isAuthenticated && <p>{user.name}</p>}
 
                     {isAuthenticated ? (
                         <li>
