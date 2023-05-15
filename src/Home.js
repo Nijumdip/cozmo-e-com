@@ -7,7 +7,7 @@ import Trusted from "./components/Trusted";
 const Home = () => {
     return (
         <>
-            <HeroSection title="Thapa Store" />
+            <HeroSection title="Cozmo Store" />
             <FeatureProduct />
             <Services />
             <Trusted />

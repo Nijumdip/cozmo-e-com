@@ -49,7 +49,7 @@ h4 {
 
  h1 {
   color: ${({ theme }) => theme.colors.heading};
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 900;
 }
 
@@ -121,7 +121,7 @@ ${"" /* resuable code section  */}
 .intro-data {
   margin-bottom: 0;
   text-transform: uppercase;
-  color: #5138ee;
+  color: green;
 }
 
 .caption {

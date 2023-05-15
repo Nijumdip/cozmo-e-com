@@ -91,8 +91,8 @@ h3 {
   height: 8rem;
   padding: 2rem;
   border-radius: 50%;
-  background-color: #fff;
-  color: #5138ee;
+  background-color: #3D9960;
+  color: #fff;
 }
 `
 

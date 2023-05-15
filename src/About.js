@@ -10,7 +10,7 @@ const About = () => {
   return (
     <>
       {myName}
-    <HeroSection title="Thapa Ecommerce" />
+    <HeroSection title="Cozmo ECommerce" />
     </>
   )
 }

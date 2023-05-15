@@ -7,7 +7,8 @@ const Header = () => {
   return (
       <MainHeader>
           <NavLink to="/">
-            <img src="./images/logo.png" alt="logo" />
+            {/* <img src="./images/logo.png" alt="logo" /> */}
+            <h1 style={{color:"#329057"}}> Cozmo Store </h1>
           </NavLink>
           <Nav />
       </MainHeader>
@@ -17,7 +18,7 @@ const Header = () => {
 const MainHeader = styled.header`
   padding: 0 4.8rem;
   height: 10rem;
-  background-color: ${({ theme }) => theme.colors.bg};
+  background-color: ${({ theme }) => theme.colors.bg}; 
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -120,7 +120,7 @@ const FilterSection = () => {
                 </div>
             </div>
 
-            <div className="filter_price">
+            <div  className="filter_price">
                 <h3>Price</h3>
                 <p>
                     <FormatPrice price={price} />
