@@ -25,7 +25,7 @@ const HeroSection = ({ title }) => {
 
                     <div className="hero-section-image">
                         <figure>
-                        <img src="images/hero.jpg" alt="hero-sectionPhoto" className="img-style" />
+                        <img src="https://i.ibb.co/C13m9Zk/happy-family-shopping.jpg" alt="hero-sectionPhoto" className="img-style" />
                         </figure>
                     </div>
                 </div>

@@ -58,7 +58,7 @@ const Wrapper = styled.section`
             left: 0;
             width: 0%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 128, 0, 0.1) ;
             transition: all 0.2s linear;
             cursor: pointer;
         }
@@ -76,7 +76,7 @@ const Wrapper = styled.section`
         }
     }
     .card {
-        border: 0.1rem solid rgb(170 170 170 / 40%);
+        border: 0.1rem solid #329057;
         .card-data {
             padding: 0 2rem;
         }
@@ -88,14 +88,14 @@ const Wrapper = styled.section`
         }
         .btn {
             margin: 2rem 0;
-            background-color: rgb(0 0 0 / 0%);
-            border: 0.1rem solid rgb(98 84 243);
+            background-color: #329057;
+            border: 0.1rem solid #329057;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: rgb(98 84 243);
+            color: #fff;
             &:hover {
-                background-color: rgb(98 84 243);
+                background-color: #ACE0BF;
             }
             &:hover a {
                 color: #fff;
@@ -106,7 +106,8 @@ const Wrapper = styled.section`
             }
         }
         .btn-main .btn:hover {
-            color: #fff;
+            color: #0E6033;
+            font-weight: bold;
         }
     }
 `;
