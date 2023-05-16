@@ -8,6 +8,7 @@ const Home = () => {
     return (
         <>
             <HeroSection title="Cozmo Store" />
+            
             <FeatureProduct />
             <Services />
             <Trusted />
